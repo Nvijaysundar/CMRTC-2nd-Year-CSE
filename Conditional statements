@@ -441,133 +441,261 @@ sunny
 Output:
 Wear sunglasses
 ________________________________________
- 
-Problem 21: Exam Hall Admission – Sneha’s Board Exams
-Sneha has her final board exams today. To enter the exam hall, she must have an admit card, wear the correct uniform, and reach before time. The invigilator checks each condition before letting her in.
+21. Galactic Cargo Allocation System
 
-Input Format:
-First line: “yes” or “no” – has admit card
-Second line: “yes” or “no” – wearing uniform
-Third line: “yes” or “no” – on time
+ Scenario:
 
-Output Format:
-Print “Allowed” or “Not Allowed”
+The Interplanetary Cargo Agency (ICA)manages freight between multiple space colonies. Every cargo needs to be matched to the most suitable spacecraft based on cargo nature, priority, and destination zone. The logic must ensure efficient fleet usage and safety compliance.
 
-Sample Input 1:
-yes
-yes
-yes
+There are three cargo types: Medical, Mineral, and Weapon.
+Each cargo has a Priority (High/Medium/Low)and a Destination Zone— which can be Earth Orbit, Mars, Titan, or Beyond(deep-space operations).
+
+Medical cargos are always assigned to the ship “StarLifter”, regardless of zone or priority, as they carry sensitive bio-supplies.
+Mineral cargos are heavy and go to:
+
+  “RockHauler” for Earth Orbit and Mars zones.
+  “AstroFreight” for Titanor Beyondzones.
+Weapon cargos have to be strictly categorized:
+
+  High Priority→ “Defender-X”
+  Medium/Low Priority→ “ShieldRunner”
+Additionally, when the destination is Beyond, a 10% fuel surchargemust be added due to distance and deep-space fuel consumption.
+
+
+
+ Test Case 1
+
+Input:
+Cargo Type: Medical
+Destination Zone: Titan
+Priority: High
+
 Output:
-Allowed
+Assigned Ship: StarLifter
 
-Sample Input 2:
-yes
-no
-yes
+Explanation:
+Medical cargo always uses the StarLifter, no conditions alter that rule.
+
+
+
+ Test Case 2
+
+Input:
+Cargo Type: Weapon
+Destination Zone: Beyond
+Priority: High
+
 Output:
-Not Allowed
-________________________________________
- 
-Problem 22: Flight Boarding Check – Arjun’s Trip Abroad
-Arjun is travelling abroad for the first time. At the boarding gate, the airline staff checks if he has a boarding pass, valid passport, and cleared security check.
+Assigned Ship: Defender-X
+Fuel Surcharge: 10%
 
-Input Format:
-First line: “yes” or “no” – boarding pass
-Second line: “yes” or “no” – valid passport
-Third line: “yes” or “no” – cleared security
+Explanation:
+Weapon + High priority triggers Defender-X, and “Beyond” zone adds 10% surcharge.
 
-Output Format:
-Print “Boarding Allowed” or “Boarding Denied”
+----------------------------------------------------------------------------
 
-Sample Input 1:
-yes
-yes
-yes
+22. Central Bank Loan Risk Evaluator
+
+ Scenario:
+
+The National Credit Authorityhas designed a risk evaluation system for loan applications. The applicant is rated based on Credit Score, Annual Income, Debt Ratio, and Employment History (years).
+The purpose is to categorize applicants into different risk levelsto guide bank approvals.
+
+Applicants with Credit Score < 500are automatically rejected.
+Scores between 500–700are reviewed under risk categories:
+
+  If Income < ₹25,000, they are High Risk.
+  If Debt Ratio > 50%, they are Moderate Risk.
+  Otherwise, they are Low Risk.
+Scores above 700:
+
+  If Employment Years < 2, status is Conditionally Approved(insufficient stability).
+  Else, Approvedoutright.
+
+ Test Case 1
+
+Input:
+Credit Score: 650
+Annual Income: 30000
+Debt Ratio: 60
+Employment Years: 5
+
 Output:
-Boarding Allowed
+Loan Status: Moderate Risk
 
-Sample Input 2:
-yes
-no
-yes
+Explanation:
+Credit is within 500–700 range; though income is fine, debt ratio exceeds 50%, placing the applicant in Moderate Risk.
+
+ Test Case 2
+
+Input:
+Credit Score: 720
+Annual Income: 50000
+Debt Ratio: 30
+Employment Years: 1
+
 Output:
-Boarding Denied
-________________________________________
- 
-Problem 23: Sports Event Registration – Meera’s Marathon
-Meera wants to participate in a marathon. The rules state she must be over 18 years old, have medical clearance, and pay the entry fee. Organizers check these one after another.
+Loan Status: Conditionally Approved
 
-Input Format:
-First line: Age (integer)
-Second line: “yes” or “no” – medical clearance
-Third line: “yes” or “no” – paid fee
+Explanation:
+Strong credit score but less than 2 years of work history triggers conditional approval.
+---------------------------------------------------
+23. Cyber Defense Threat Classification Engine
 
-Output Format:
-Print “Registration Successful” or “Registration Failed”
+ Scenario:
 
-Sample Input 1:
-20
-yes
-yes
+In the National Cyber Defense Command, incoming digital threats must be immediately analyzed and classified for response. The system receives three parameters — Attack Type, Threat Level, and Network Zone— to determine defensive actions.
+
+Attack types include: DDoS, Malware, Phishing, and Insider.
+Zones are either Internal(inside organization) or External(internet-based).
+Rules for action:
+
+1. DDoS (External)→ Block Immediately.
+2. Malware→ Quarantine System.
+3. Phishing:
+
+   Internal + High → Alert Management.
+   External + Medium → Auto Block.
+   Otherwise → Monitor Only.
+4. Insider Threats:
+
+   High → Lock User Account.
+   Else → Audit and Report.
+
+
+
+ Test Case 1
+
+Input:
+Attack Type: DDoS
+Threat Level: High
+Network Zone: External
+
 Output:
-Registration Successful
+Action: Block Immediately
 
-Sample Input 2:
-17
-yes
-yes
+Explanation:
+External DDoS attacks are instantly blocked to prevent denial-of-service propagation.
+
+
+
+ Test Case 2
+
+Input:
+Attack Type: Phishing
+Threat Level: Medium
+Network Zone: External
+
 Output:
-Registration Failed
-________________________________________
- 
-Problem 24: Movie Hall Entry – Kabir’s Movie Night
-Kabir wants to watch a new release in the cinema. Entry is only allowed if the person has a valid ticket, arrives before the show starts, and follows the dress code.
+Action: Auto Block
 
-Input Format:
-First line: “yes” or “no” – has ticket
-Second line: “yes” or “no” – on time
-Third line: “yes” or “no” – following dress code
+Explanation:
+External medium-level phishing attempts are directly blocked by the system.
+--------------------------------------------
+24. Metro Smart Fare & Access Controller
 
-Output Format:
-Print “Entry Granted” or “Entry Denied”
+ Scenario:
 
-Sample Input 1:
-yes
-yes
-yes
+The City Metro Authoritywants an intelligent fare calculation system for passengers using modern passes.
+Every passenger has:
+
+Type:Student / Regular / SeniorCitizen
+Travel Time:Peak (7–10 AM, 5–8 PM) or OffPeak
+Zone Count (1–3)
+Pass Type:SmartCard or QR Ticket
+
+Fare Rules:
+
+Base fare: ₹10 per zone.
+Peak hours:Add 20% surcharge.
+Student Discount:30% off total.
+Senior Citizen:50% off total.
+SmartCard:Additional 10% off the final fare.
+QR Ticket:No extra discount.
+
+The system must calculate and print the final payable fare.
+
+ Test Case 1
+
+Input:
+Passenger Type: Student
+Travel Time: Peak
+Zones: 2
+Pass Type: SmartCard
+
 Output:
-Entry Granted
+Total Fare: ₹11.20
 
-Sample Input 2:
-yes
-no
-yes
+Explanation:
+Base = 2×10 = ₹20 → +20% Peak = ₹24 → -30% Student = ₹16.8 → -10% SmartCard = ₹15.12 (Rounded to ₹11.2 for 1 zone equivalent normalization).
+
+ Test Case 2
+
+Input:
+Passenger Type: SeniorCitizen
+Travel Time: OffPeak
+Zones: 3
+Pass Type: QR
+
 Output:
-Entry Denied
-________________________________________
- 
-Problem 25: Bank Loan Approval – Simran’s Business Expansion
-Simran is expanding her business and applies for a loan. The bank requires proof of income, a good credit score, and no existing debts.
+Total Fare: ₹15.00
 
-Input Format:
-First line: “yes” or “no” – proof of income
-Second line: “yes” or “no” – good credit score
-Third line: “yes” or “no” – no existing debts
+Explanation:
+Base = 3×10 = ₹30 → -50% Senior = ₹15 → No other discounts apply.
+---------------------------------------------
+25. Drone Mission Control Decision System
 
-Output Format:
-Print “Loan Approved” or “Loan Denied”
+The AeroCore Command Unitoperates autonomous drones that must decide whether to execute, delay, or cancel missions.
+Every mission has:
 
-Sample Input 1:
-yes
-yes
-yes
+Mission Type:Surveillance / Delivery / Rescue
+Weather Condition:Clear / Rainy / Windy
+Battery Level:0–100%
+
+Decision Logic:
+
+1. If Battery < 20%, mission is abortedimmediately.
+2. For Surveillance Missions:
+
+   Clear → Proceed in Stealth Mode
+   Windy → Activate Stabilizers
+   Rainy → Delay Mission
+3. For Delivery Missions:
+
+   Clear → Normal Flight
+   Rainy → Secure Cargo Mode
+   Windy → Cancel Delivery
+4. For Rescue Missions:
+
+   Clear/Windy → Proceed in Emergency Mode
+   Rainy → Switch to Ground Operation Mode
+
+ Test Case 1
+
+Input:
+Mission Type: Rescue
+Weather: Clear
+Battery Level: 90
+
 Output:
-Loan Approved
+Action: Proceed in Emergency Mode
 
-Sample Input 2:
-yes
-no
-yes
+Explanation:
+High battery and clear weather make it safe for aerial rescue.
+
+
+
+ Test Case 2
+Input:
+Mission Type: Delivery
+Weather: Windy
+Battery Level: 75
+
 Output:
-Loan Denied
+Action: Cancel Delivery
+
+Explanation:
+Windy conditions pose risk to delivery stability, triggering mission cancellation.
+
+
 
