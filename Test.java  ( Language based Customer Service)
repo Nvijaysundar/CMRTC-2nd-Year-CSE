@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Welcome to Book Store");
+		System.out.println("Select Language\nPress 1 for English");
+		System.out.println("తెలుగు కోసం 2 నొక్కండి");
+		System.out.println("हिंदी के लिए 3 दबाएँ");
+		
+		switch(sc.nextInt())
+		{
+		case 1:
+			englishOptions(sc);
+			break;
+		case 2:
+			teluguOptions(sc);
+			break;
+		case 3:
+			hindiOptions(sc);
+			break;
+		}
+	}
+
+	private static void hindiOptions(Scanner sc) {
+		System.out.println("पूछताछ के लिए 1 दबाएँ\n"
+				+ "ऑर्डर देने के लिए 2 दबाएँ");
+		switch(sc.nextInt())
+		{
+		case 1:
+			System.out.println("हम कॉल को ग्राहक एजेंट को स्थानांतरित कर रहे हैं");
+			break;
+		case 2:
+			System.out.println("हमसे ऑर्डर करने के लिए धन्यवाद। धन्यवाद");
+			break;
+		}
+		
+	}
+
+	private static void teluguOptions(Scanner sc) {
+		System.out.println("విచారణ కోసం 1 నొక్కండి\n"
+				+ "ఆర్డర్ ఇవ్వడానికి 2 నొక్కండి");	
+		switch(sc.nextInt())
+		{
+		case 1:
+			System.out.println("మేము కస్టమర్ ఏజెంట్ కు కాల్ బదిలీ చేస్తున్నాము.");
+			break;
+		case 2:
+			System.out.println("మా నుండి ఆర్డర్ చేసినందుకు ధన్యవాదాలు. ధన్యవాదాలు.	");
+			break;
+		}
+	}
+
+	private static void englishOptions(Scanner sc) {
+		System.out.println("Press 1 for Enquiry\n"
+				+ "Press 2 for place an order");
+		switch(sc.nextInt())
+		{
+		case 1:
+			System.out.println("We are tranferring call to customer agent");
+			break;
+		case 2:
+			System.out.println("Thanks for Order form Us. Thankyou");
+			break;
+		}
+	}
+}
