@@ -1,0 +1,573 @@
+Problem 1: Raincoat Decision – Riya’s Morning Choice
+
+Riya wakes up early every morning to prepare for college. She always checks the weather forecast on her phone before stepping out. 
+If the temperature is below 20°C or if rain is predicted, she takes her yellow raincoat that her grandmother gave her. Otherwise, she enjoys the fresh air without it. Your program must help her decide.
+Input Format:
+●	Integer temperature (°C)
+●	String weather ("rainy" or "clear")
+Output Format:
+●	"Carry Raincoat" if true
+●	"No Raincoat Needed" if false
+Sample Test Case 1:
+18
+clear
+Output: 
+Carry Raincoat
+Sample Test Case 2:
+25
+clear
+Output:
+ No Raincoat Needed
+________________________________________
+ 
+Problem 2: Exam Pass/Fail – Aditya’s Result
+
+Aditya, a diligent student, has just finished his semester exams. The passing marks for the subject are 50. If his score meets or exceeds this, he can celebrate with his friends;
+
+otherwise, he’ll have to retake the exam. Help him find out.
+Input Format:
+●	Integer marks
+Output Format:
+●	"Pass" if marks ≥ 50
+●	"Fail" otherwise
+Sample Test Case 1:
+72
+Output: 
+Pass
+Sample Test Case 2:
+45
+Output: 
+Fail
+________________________________________
+ 
+
+Problem 3: Movie Ticket Discount – Cinema Offer
+
+At Rahul’s local cinema, students under 21 get a 20% discount on tickets. Rahul visits the ticket counter and must confirm his eligibility by declaring if he’s a student and providing his age.
+Input Format:
+●	String student ("yes"/"no")
+●	Integer age
+Output Format:
+●	"Discount Applied" if student = "yes" and age < 21
+●	"No Discount" otherwise
+Sample Test Case 1:
+yes
+19
+Output: 
+Discount Applied
+Sample Test Case 2:
+no
+19
+Output: 
+No Discount
+________________________________________
+ 
+Problem 4: Voting Eligibility – Citizen Check
+
+The election commission is verifying voter eligibility. A person can vote if they are at least 18 years old and hold citizenship. Use the given information to decide if they can cast their vote.
+Input Format:
+●	Integer age
+●	String citizen ("yes"/"no")
+Output Format:
+●	"Eligible to Vote" if true
+●	"Not Eligible" if false
+Sample Test Case 1:
+20
+yes
+Output: 
+Eligible to Vote
+Sample Test Case 2:
+17
+yes
+Output:
+ Not Eligible
+________________________________________
+ 
+Problem 5: Gym Entry – ID and Membership
+
+The FitLife Gym requires two things for entry: a valid membership card and proof of monthly fee payment. Ajay, a regular visitor, arrives but isn’t sure if his payment has been processed.
+Input Format:
+●	String membership ("yes"/"no")
+●	String payment ("paid"/"unpaid")
+Output Format:
+●	"Access Granted" if both conditions are true
+●	"Access Denied" otherwise
+Sample Test Case 1:
+yes
+paid
+Output: 
+Access Granted
+Sample Test Case 2:
+yes
+unpaid
+Output: 
+Access Denied
+________________________________________
+ 
+Problem 6: School Picnic Eligibility – Aarav’s Excitement
+
+Aarav’s school is organizing a picnic to a nearby amusement park. Only students with at least 80% attendance and no disciplinary warnings can join. 
+Aarav has been eagerly waiting for this trip, and now he checks his records to see if he qualifies.
+Input Format:
+●	Integer attendance (in %)
+●	String warning ("yes"/"no")
+Output Format:
+●	"Allowed for Picnic" if attendance ≥ 80 and warning = "no"
+●	"Not Allowed" otherwise
+Sample Test Case 1:
+85
+no
+Output: 
+Allowed for Picnic
+Sample Test Case 2:
+78
+yes
+Output:
+ Not Allowed
+________________________________________
+ 
+Problem 7: Library Membership Renewal – Meera’s Dilemma
+
+Meera’s library membership is about to expire. Members must have borrowed at least 10 books in the last year or have paid a renewal fee of ₹500 to continue their membership.
+Input Format:
+●	Integer booksBorrowed
+●	Integer feePaid (₹)
+Output Format:
+●	"Membership Renewed" if booksBorrowed ≥ 10 or feePaid ≥ 500
+●	"Membership Expired" otherwise
+Sample Test Case 1:
+12
+0
+Output: 
+Membership Renewed
+Sample Test Case 2:
+5
+300
+Output: 
+Membership Expired
+________________________________________
+ 
+Problem 8: Movie Ticket Discount – Rahul’s Weekend Plan
+
+Rahul wants to catch a movie on the weekend. The theater offers a discount if the viewer is under 18 or the showtime is before 5 PM. Rahul checks his age and showtime to see if he qualifies.
+Input Format:
+●	Integer age
+●	Integer showTime (24-hour format)
+Output Format:
+●	"Discount Applied" if age < 18 or showTime < 17
+●	"No Discount" otherwise
+Sample Test Case 1:
+16
+20
+Output: 
+Discount Applied
+Sample Test Case 2:
+20
+18
+Output: 
+No Discount
+
+ 
+Problem 9: Exam Hall Entry – Priya’s Nervous Check
+
+Priya is about to enter the examination hall for her final board exams. 
+The school has implemented very strict rules this year after some incidents last semester: students must carry both their admit card and their college ID card to be allowed inside. 
+Priya double-checks her bag and wonders whether she will be able to walk in confidently or be stopped at the door by the strict invigilator.
+Input Format:
+●	First line: String admitCard ("yes" or "no")
+●	Second line: String idCard ("yes" or "no")
+Output Format:
+●	"Entry Allowed" if both are "yes"
+●	"Entry Denied" otherwise
+Sample Test Case 1 (True Case):
+yes  
+yes  
+Output: 
+Entry Allowed
+Sample Test Case 2 (False Case):
+yes  
+no  
+Output: 
+Entry Denied
+________________________________________
+ 
+Problem 10: Sports Day Race Qualification – Kabir’s Training
+
+Kabir has been training every morning for his school’s 200m race. 
+The rules are simple yet tough: he must complete the run in under 30 seconds and should have attended at least 3 official practice sessions to be eligible. On the day of final selection, 
+his coach times him with a stopwatch and checks the attendance register. The question is—will Kabir’s dedication pay off, or will he need to try again next year?
+Input Format:
+●	First line: Float timeTaken (in seconds)
+●	Second line: Integer sessionsAttended
+Output Format:
+●	"Qualified" if timeTaken < 30 and sessionsAttended ≥ 3
+●	"Not Qualified" otherwise
+Sample Test Case 1 (True Case):
+29.5  
+4  
+Output: 
+Qualified
+Sample Test Case 2 (False Case):
+30.2  
+3  
+Output: 
+Not Qualified
+________________________________________
+ 
+Problem 11: Festival Discount Eligibility – Kavya’s Shopping Dilemma
+ Kavya visits a shopping mall during the festival season. The store offers different discounts based on the purchase amount:
+●	Above ₹5000 → 25% discount
+●	₹3000–₹5000 → 15% discount
+●	₹1000–₹2999 → 5% discount
+●	Below ₹1000 → No discount
+Write a program to determine the discount percentage Kavya will get.
+Input Format:
+●	First line: Integer representing purchase amount
+Output Format:
+●	Discount percentage as an integer followed by "%"
+Sample Input 1:
+5200
+Output:
+25%
+Sample Input 2:
+850
+Output:
+0%
+________________________________________
+ 
+Problem 12: Train Fare Calculator – Rahul’s Ticket Booking
+ Rahul is booking a train ticket. The fare is decided based on the travel distance:
+●	Above 1000 km → ₹1500
+●	500–1000 km → ₹900
+●	200–499 km → ₹500
+●	Below 200 km → ₹200
+Write a program that takes the travel distance and outputs the ticket fare.
+Input Format:
+●	First line: Integer representing distance in km
+Output Format:
+●	Fare in rupees with "₹" symbol
+Sample Input 1:
+1200
+Output:
+₹1500
+Sample Input 2:
+150
+Output:
+₹200
+________________________________________
+ 
+Problem 13: Student Grade Categorizer – Sneha’s Report Card
+ Sneha’s school awards grades based on marks:
+●	90–100 → Grade A
+●	75–89 → Grade B
+●	50–74 → Grade C
+●	Below 50 → Grade D
+Write a program to output Sneha’s grade based on her marks.
+Input Format:
+●	First line: Integer marks (0–100)
+Output Format:
+●	Grade (A/B/C/D)
+Sample Input 1:
+88
+Output:
+B
+Sample Input 2:
+45
+Output:
+D
+________________________________________
+ 
+Problem 14: Movie Ticket Pricing – Arun’s Weekend Plan
+ Arun is planning to watch a movie. Ticket prices vary depending on the show timing:
+●	Morning (before 12 pm) → ₹150
+●	Afternoon (12 pm–4 pm) → ₹200
+●	Evening (4 pm–8 pm) → ₹250
+●	Night (after 8 pm) → ₹180
+Write a program to display the ticket price based on the given show time (24-hour format).
+Input Format:
+●	First line: Integer representing show time in hours (0–23)
+Output Format:
+●	Ticket price in rupees with "₹" symbol
+Sample Input 1:
+15
+Output:
+₹200
+Sample Input 2:
+21
+Output:
+₹180
+________________________________________
+ 
+Problem 15: Fitness Club Membership – Meera’s Health Goals
+ Meera wants to join a fitness club. The membership fee depends on the chosen plan duration:
+●	12 months → ₹8000
+●	6 months → ₹4500
+●	3 months → ₹2500
+●	1 month → ₹1000
+Write a program to display the membership fee.
+Input Format:
+●	First line: Integer representing plan duration in months
+Output Format:
+●	Membership fee in rupees with "₹" symbol
+Sample Input 1:
+6
+Output :
+₹4500
+Sample Input 2:
+1
+Output :
+₹1000
+
+ 
+Problem 16: Scholarship Eligibility – Aditya’s Dream University
+Aditya has always dreamt of studying in his dream university abroad. This year, the university is offering a fully funded scholarship, but the eligibility criteria are strict. 
+A student must have scored above 90% in academics, have extracurricular achievements, and belong to a financially weaker section. The selection committee will check these conditions step-by-step,
+and Aditya is anxious to know if he qualifies.
+
+Input Format:
+First line: Academic percentage (float)
+Second line: “yes” or “no” – extracurricular achievement
+Third line: “yes” or “no” – financial need
+
+Output Format:
+Print “Eligible for Scholarship” or “Not Eligible”
+
+Sample Input 1:
+92
+yes
+yes
+Output:
+Eligible for Scholarship
+
+Sample Input 2:
+88
+yes
+yes
+Output:
+Not Eligible
+________________________________________
+ 
+Problem 17: Job Application Filter – Priya’s Job Hunt
+Priya has applied for a competitive job that requires candidates to meet specific conditions. Applicants must have at least 3 years of work experience, hold a relevant degree, and clear a basic skill test. 
+The HR team filters candidates using these checks in sequence.
+
+Input Format:
+First line: Years of experience (integer)
+Second line: “yes” or “no” – has relevant degree
+Third line: “yes” or “no” – cleared skill test
+
+Output Format:
+Print “Application Shortlisted” or “Application Rejected”
+
+Sample Input 1:
+4
+yes
+yes
+Output:
+Application Shortlisted
+
+Sample Input 2:
+2
+yes
+yes
+Output:
+Application Rejected
+________________________________________
+ 
+Problem 18: Password Strength Checker – Rohan’s Account Setup
+Rohan is creating an account for his startup portal. For security, the password must meet certain requirements: at least 8 characters, contain at least one digit, and include at least one special character. 
+The system checks these conditions one by one.
+
+Input Format:
+First line: Password string
+
+Output Format:
+Print “Strong Password” or “Weak Password”
+
+Sample Input 1:
+Hello@123
+Output:
+Strong Password
+
+Sample Input 2:
+hello123
+Output:
+Weak Password
+________________________________________
+ 
+Problem 19: Traffic Violation Penalty – Anjali’s Morning Rush
+Anjali is rushing to work and is stopped at a traffic checkpoint. The traffic officer checks for three violations: not wearing a helmet, speeding, and jumping a red light. 
+If she commits any of these, she gets a penalty.
+
+Input Format:
+First line: “yes” or “no” – helmet worn
+Second line: “yes” or “no” – speeding
+Third line: “yes” or “no” – red light jump
+
+Output Format:
+Print “Penalty” or “No Penalty”
+
+Sample Input 1:
+no
+yes
+no
+Output:
+Penalty
+
+Sample Input 2:
+yes
+no
+no
+Output:
+No Penalty
+________________________________________
+ 
+Problem 20: Weather Clothing Suggestion – Ravi’s Picnic Day
+Ravi is planning a picnic but wants to dress appropriately for the weather. If it’s raining, he should carry a raincoat; if it’s cold, wear a jacket; if it’s sunny, wear sunglasses.
+The decision is based on weather reports.
+
+Input Format:
+First line: Weather condition (“rainy”, “cold”, “sunny”)
+Output Format:
+Print the clothing suggestion.
+
+Sample Input 1:
+rainy
+Output:
+Carry a raincoat
+
+Sample Input 2:
+sunny
+Output:
+Wear sunglasses
+________________________________________
+ 
+Problem 21: Exam Hall Admission – Sneha’s Board Exams
+Sneha has her final board exams today. To enter the exam hall, she must have an admit card, wear the correct uniform, and reach before time. The invigilator checks each condition before letting her in.
+
+Input Format:
+First line: “yes” or “no” – has admit card
+Second line: “yes” or “no” – wearing uniform
+Third line: “yes” or “no” – on time
+
+Output Format:
+Print “Allowed” or “Not Allowed”
+
+Sample Input 1:
+yes
+yes
+yes
+Output:
+Allowed
+
+Sample Input 2:
+yes
+no
+yes
+Output:
+Not Allowed
+________________________________________
+ 
+Problem 22: Flight Boarding Check – Arjun’s Trip Abroad
+Arjun is travelling abroad for the first time. At the boarding gate, the airline staff checks if he has a boarding pass, valid passport, and cleared security check.
+
+Input Format:
+First line: “yes” or “no” – boarding pass
+Second line: “yes” or “no” – valid passport
+Third line: “yes” or “no” – cleared security
+
+Output Format:
+Print “Boarding Allowed” or “Boarding Denied”
+
+Sample Input 1:
+yes
+yes
+yes
+Output:
+Boarding Allowed
+
+Sample Input 2:
+yes
+no
+yes
+Output:
+Boarding Denied
+________________________________________
+ 
+Problem 23: Sports Event Registration – Meera’s Marathon
+Meera wants to participate in a marathon. The rules state she must be over 18 years old, have medical clearance, and pay the entry fee. Organizers check these one after another.
+
+Input Format:
+First line: Age (integer)
+Second line: “yes” or “no” – medical clearance
+Third line: “yes” or “no” – paid fee
+
+Output Format:
+Print “Registration Successful” or “Registration Failed”
+
+Sample Input 1:
+20
+yes
+yes
+Output:
+Registration Successful
+
+Sample Input 2:
+17
+yes
+yes
+Output:
+Registration Failed
+________________________________________
+ 
+Problem 24: Movie Hall Entry – Kabir’s Movie Night
+Kabir wants to watch a new release in the cinema. Entry is only allowed if the person has a valid ticket, arrives before the show starts, and follows the dress code.
+
+Input Format:
+First line: “yes” or “no” – has ticket
+Second line: “yes” or “no” – on time
+Third line: “yes” or “no” – following dress code
+
+Output Format:
+Print “Entry Granted” or “Entry Denied”
+
+Sample Input 1:
+yes
+yes
+yes
+Output:
+Entry Granted
+
+Sample Input 2:
+yes
+no
+yes
+Output:
+Entry Denied
+________________________________________
+ 
+Problem 25: Bank Loan Approval – Simran’s Business Expansion
+Simran is expanding her business and applies for a loan. The bank requires proof of income, a good credit score, and no existing debts.
+
+Input Format:
+First line: “yes” or “no” – proof of income
+Second line: “yes” or “no” – good credit score
+Third line: “yes” or “no” – no existing debts
+
+Output Format:
+Print “Loan Approved” or “Loan Denied”
+
+Sample Input 1:
+yes
+yes
+yes
+Output:
+Loan Approved
+
+Sample Input 2:
+yes
+no
+yes
+Output:
+Loan Denied
+
