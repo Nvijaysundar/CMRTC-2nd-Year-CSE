@@ -698,4 +698,202 @@ Explanation:
 Windy conditions pose risk to delivery stability, triggering mission cancellation.
 
 
+26. WeatherShield Energy Controller – Adaptive Solar Grid
+
+ Scenario:
+
+The WeatherShield SmartGrid monitors solar conditions and automatically adjusts how much renewable energy is distributed.
+It calculates the Power Stability Index (PSI) to determine grid mode based on solar intensity, battery level, temperature, and load demand.
+
+Inputs:
+
+SolarIntensity (in W/m²)
+BatteryLevel (%)
+Temperature (°C)
+DemandLoad (in MW)
+
+Rules:
+
+1. If SolarIntensity < 200,
+   → PSI = `(SolarIntensity / 5) + (BatteryLevel / 4)`
+2. If SolarIntensity ≥ 200 and ≤ 600,
+
+   If Temperature > 45°C,
+     PSI = `(BatteryLevel / 2) - (Temperature / 10)`
+   Else,
+     PSI = `(SolarIntensity / 10) + (BatteryLevel / 3)`
+3. If SolarIntensity > 600,
+
+   If DemandLoad > 80,
+     PSI = `(SolarIntensity / 20) - (DemandLoad / 5)`
+   Else,
+     PSI = `(SolarIntensity / 15) + (BatteryLevel / 5)`
+4. Decision by PSI:
+
+   PSI ≥ 70 → “Optimal Operation”
+   40 ≤ PSI < 70 → “Stable Operation”
+   PSI < 40 → “Grid Stabilizer Activated”
+
+
+ Test Case 1
+
+Input:
+SolarIntensity: 750
+BatteryLevel: 60
+Temperature: 40
+DemandLoad: 70
+
+Output:
+PSI: 62
+Status: Stable Operation
+
+Explanation:
+Solar>600, load<80 → PSI=(750/15)+(60/5)=50+12=62 → falls in “Stable” range.
+
+ Test Case 2
+
+Input:
+SolarIntensity: 300
+BatteryLevel: 50
+Temperature: 48
+DemandLoad: 90
+
+Output:
+PSI: 20.2
+Status: Grid Stabilizer Activated
+
+Explanation:
+Mid-intensity + high temperature → PSI=(50/2)-(48/10)=25–4.8=20.2 → below 40 → stabilization triggered.
+
+
+27. Global Freight Corporation – Dynamic Tariff Engine
+
+ Scenario:
+
+The Global Freight Corporation (GFC) uses an intelligent Tariff Engine to compute shipping charges dynamically, depending on weight, distance, region, and priority level.
+It determines the Final Tariff (₹) with nested and combined conditions.
+
+Inputs:
+
+Weight (in kg)
+Distance (in km)
+Region: 1 → Domestic, 2 → International
+Priority: Normal / Express / Critical
+
+Rules:
+
+1. Base Tariff =
+
+   If Weight ≤ 10, → ₹50 × (Distance / 100)
+   If Weight ≤ 50, → ₹75 × (Distance / 100)
+   Else → ₹100 × (Distance / 100)
+2. If Region = International, multiply Base Tariff × 1.5
+3. Priority Multiplier (switch-case):
+
+   Normal → ×1
+   Express → ×1.25
+   Critical → ×1.5
+4. Adjustments:
+
+   If Distance > 5000 and Region = International, add ₹2000 surcharge.
+   If Weight > 100 and Priority = Critical, add extra ₹3000 handling fee.
+
+ Test Case 1
+
+Input:
+Weight: 40
+Distance: 800
+Region: 1 (Domestic)
+Priority: Express
+
+Output:
+Final Tariff: ₹750
+
+Explanation:
+Base = 75 × (800/100)=₹600 → Express ×1.25=₹750 → Domestic (no surcharge).
+
+
+ Test Case 2
+
+Input:
+Weight: 120
+Distance: 6000
+Region: 2 (International)
+Priority: Critical
+
+Output:
+Final Tariff: ₹19500
+
+Explanation:
+Base=100×(6000/100)=₹6000 → Intl×1.5=₹9000 → Critical×1.5=₹13500 → +₹2000 (distance) +₹3000 (weight)=₹19500.
+
+28. Quantum University – Scholarship Allocator
+
+ Scenario:
+
+At Quantum University, scholarships are awarded based on a mix of academic rank, sports achievements, and social service.
+The system uses mathematical and conditional logic to compute the final scholarship percentage.
+
+Inputs:
+
+Rank (1–10000)
+SportsScore (0–100)
+ServiceHours (in hours)
+Department:
+  1 → Engineering
+  2 → Science
+  3 → Arts
+
+Rules:
+
+1. Base Scholarship % by Rank:
+
+   Rank ≤ 100 → 80%
+   Rank 101–500 → 60%
+   Rank 501–2000 → 40%
+   Else → 0%
+2. Sports Bonus:
+
+   SportsScore ≥ 90 → +15%
+   SportsScore ≥ 70 → +10%
+3. Service Bonus:
+
+   ServiceHours ≥ 100 → +5%
+4. Department Adjustment (switch):
+
+   Engineering → +0%
+   Science → +3%
+   Arts → +7%
+5. Cap final scholarship at 100% maximum.
+
+ Test Case 1
+
+Input:
+Rank: 80
+SportsScore: 95
+ServiceHours: 120
+Department: 3
+
+Output:
+Scholarship: 100%
+
+Explanation:
+Base 80 +15 (sports)+5 (service)+7 (arts)=107% → capped at 100%.
+
+
+ Test Case 2
+
+Input:
+Rank: 1200
+SportsScore: 75
+ServiceHours: 50
+Department: 2
+
+Output:
+Scholarship: 53%
+
+Explanation:
+Base 40 +10 (sports)+0 (service)+3 (science)=53%.
+
+
 
