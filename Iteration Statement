@@ -1,0 +1,393 @@
+Problem 1: Spiral Light Decoration – Festival Pillar Wrap 
+Every year during the grand Diwali festival, the central square of Ramu’s village turns into a mesmerizing hub of colors, lights, and laughter. This time, the village elders have handed Ramu the important responsibility of decorating the tallest pillar in the middle of the square. Ramu wants to make the decoration extra special by using a newly purchased set of LED lights, each numbered in sequence from 1 onwards. His creative plan is to wrap the lights in a perfect clockwise spiral starting from the top-left corner of the pillar’s square-shaped base and continuing inward until it reaches the very center. He has carefully drawn the base as an N × N grid (where N is an odd number) so that his fellow decorators can follow a precise numbering order while attaching the LEDs. Now, before the decoration begins, Ramu needs to create the exact grid pattern showing the sequence in which the lights should be placed, so no mistakes happen during the festival rush.
+Input Format:
+One line: Integer N (odd)
+Output Format:
+N lines, each with N space-separated integers forming a spiral matrix
+Constraints:
+1 ≤ N ≤ 9 (odd only)
+Sample Input:
+
+3
+Sample Output:
+
+1 2 3
+8 9 4
+7 6 5
+ 
+________________________________________
+Problem 2: Missing Dice Faces – Carnival Game Mystery 
+At the bustling annual carnival, the game stalls are packed with excited players, colorful banners, and the sound of cheering crowds. Ayan runs a popular dice-based challenge where players roll a standard 6-sided die multiple times to score points. However, this year something strange has happened — one side of the die on his main table has been mysteriously rubbed clean, and the number is no longer visible. In a normal die, the sum of the numbers on opposite faces is always 7, which means if we knew the top face, the bottom face would be easy to figure out. Ayan has been keeping records of the visible top faces for N rolls but now needs to calculate the total sum of all missing bottom faces to check if the game was fair. Since the crowd is growing impatient, you must quickly help him find the missing total.
+Input Format:
+First line: Integer N
+Second line: N space-separated integers (values from 1–6)
+Output Format:
+One line: Missing total
+Constraints:
+1 ≤ N ≤ 100
+Sample Input:
+
+3
+5 6 4
+Sample Output:
+
+6
+ 
+________________________________________
+Problem 3: Password Pattern Validation – Secure Login System 
+Shruti works as the lead software engineer at a large company that is launching a new internal employee portal. Security is the top priority, especially because the portal will handle sensitive payroll, project, and client information. To avoid weak passwords, Shruti implements a strict set of rules: a valid password must have at least one uppercase letter, one lowercase letter, and one digit. Without all three, the system will immediately mark the password as “Invalid.” On launch day, hundreds of employees are creating their accounts, and Shruti needs an automated way to check each entered password. Your task is to read N passwords and print whether each one is “Valid” or “Invalid” according to Shruti’s rules.
+Input Format:
+First line: N
+Next N lines: each a password string
+Output Format:
+N lines: “Valid” or “Invalid”
+Constraints:
+1 ≤ N ≤ 50, Password ≤ 100 chars
+Sample Input:
+
+2
+Hello123
+Sample Output:
+
+Valid
+Invalid
+ 
+________________________________________
+Problem 4: Max Repeated Digit – Number Frequency Analyzer 
+Aman works for a cyber security team that often deals with enormous logs of transaction IDs, authentication codes, and system-generated keys. One of his tasks is to analyze these numbers and detect unusual patterns. Recently, his system flagged several numbers that might indicate fraud. To investigate further, Aman needs to find which single digit occurs most frequently in a given number. If two or more digits have the same highest frequency, he chooses the larger digit as the result, assuming hackers often prefer larger numeric symbols for such manipulations. This quick check helps him decide if a number needs deeper investigation.
+Input Format:
+One line: Integer N
+Output Format:
+Most repeated digit
+Constraints:
+0 ≤ N ≤ 10^9
+Sample Input:
+
+112233
+Sample Output:
+
+3
+ 
+________________________________________
+Problem 5: Special Prime Digits – Number Classification Challenge 
+Ria is a mathematics enthusiast who loves exploring patterns in numbers. She recently invented her own category of numbers called “digit-prime numbers” — numbers in which every single digit is a prime number (2, 3, 5, or 7). She is curious to know how many such numbers exist between 1 and a given number N. For example, 2, 3, 5, 7, 23, and 53 are all “digit-prime” numbers. Ria believes these numbers have unique mathematical beauty, so she wants to write them down for her research journal.
+Input Format:
+One line: Integer N
+Output Format:
+One line: Count of digit-prime numbers from 1 to N
+Constraints:
+1 ≤ N ≤ 1000
+Sample Input:
+
+10
+Sample Output:
+
+4
+ 
+________________________________________
+Problem 6: Digit Product Excluder – Selective Multiplication 
+Tara is designing a quirky digital lock system where each passcode is transformed into a “code strength value” before being accepted. The value is calculated by multiplying all digits in the passcode, but she ignores digits that are 0 or 1, as they do not meaningfully change the product. If the passcode has no digits other than 0 or 1, the strength value defaults to 1. Tara needs this system to reject weak codes instantly and process strong ones quickly.
+Input Format:
+One line: Integer N
+Output Format:
+One line: Product of valid digits
+Constraints:
+0 ≤ N ≤ 10^9
+Sample Input:
+yaml
+
+1025
+Sample Output:
+
+10
+
+ 
+Problem 7: Sum of Even Digits – Digital Filter 
+Nitya has recently joined a futuristic research facility specializing in decoding alien communication signals intercepted by satellites. These signals often arrive in the form of enormous numeric sequences, far too long for human operators to analyze by eye. Within the research division, her specific responsibility is to run what they call a “digital filter”, which helps separate potentially important transmissions from ordinary static. The filtering rule is strange yet simple: a signal is more likely to be meaningful if the sum of all its even digits surpasses a certain threshold. Odd digits are considered “noise indicators” and are ignored in this preliminary check.
+On her desk sits a blinking console displaying numbers in real time, each one representing a decoded segment of a larger transmission. The automated software can read these numbers but cannot decide which are promising. Nitya must design a quick computational routine that takes a given number N, inspects each digit, adds up only those digits that are even (0, 2, 4, 6, 8), and outputs the total. Her team will then decide whether to keep or discard the transmission based on the result. Since these sequences arrive rapidly and unpredictably, the solution needs to be reliable, fast, and capable of handling very large numbers.
+Input Format:
+One line: Integer N
+Output Format:
+One line: Sum of even digits
+Constraints:
+0 ≤ N ≤ 10^9
+Sample Input:
+
+123456
+Sample Output:
+
+12
+ 
+________________________________________
+Problem 8: Consecutive Star Pattern – Staircase Stage Design 
+The annual cultural festival at Greenwood High School is a grand event, attracting parents, alumni, and even local celebrities. This year, the stage backdrop must reflect the theme “Steps to Greatness,” symbolizing the journey of students as they grow from timid beginners to confident achievers. Karan, the school’s beloved art teacher, has been chosen to lead the decoration effort. After many design drafts, he decides on a simple yet symbolic representation — a staircase made entirely of golden stars cut from glittery cardboard.
+The first row at the very bottom will have 1 shining star, the next row will have 2, the next will have 3, and so forth until the top row has exactly N stars. Each star must be aligned perfectly so that the shape resembles a staircase ascending from left to right. The audience, from their seats, will see the gradual rise as a powerful symbol of persistence. Karan knows that even one misplaced star will ruin the symmetry, so he wants to pre-plan the pattern digitally before giving instructions to his student helpers. You must help Karan generate the exact star arrangement for N rows, making sure each row’s stars are printed in the correct sequence without any gaps or misalignments.
+Input Format:
+One line: Integer N
+Output Format:
+N lines of increasing stars
+Constraints:
+1 ≤ N ≤ 100
+Sample Input:
+
+4
+Sample Output:
+markdown
+
+*
+**
+***
+****
+________________________________________
+Problem 9: Alternating Sum Series – Plus-Minus Counter 
+At the heart of a bustling mathematics fair, an enthusiastic puzzle master has set up a challenge stall that attracts curious minds of all ages. The challenge is deceptively simple: given any number N, you must compute the value of a special alternating series — 1 - 2 + 3 - 4 + 5 ... ± N. The signs alternate, starting with a plus for the first number, minus for the second, plus for the third, and so on. It looks harmless on paper, but the puzzle master knows that when N becomes large, the human brain struggles to keep track of the running total without making mistakes.
+To make things more exciting, the puzzle is part of a timed competition where contestants have only one minute to produce the correct answer. Those who succeed win a golden token that can be exchanged for a mystery prize at the main stage. The stall has already seen several overconfident mathematicians lose track halfway, ending up with wildly incorrect answers. Now, your job is to create a program that solves the puzzle instantly and without error, no matter how large N is, so that you can secure the golden token with confidence.
+Input Format:
+One line: Integer N
+Output Format:
+One line: Final result of the series
+Constraints:
+1 ≤ N ≤ 1000
+Sample Input:
+
+5
+Sample Output:
+
+3
+ 
+________________________________________
+Problem 10: Reverse Even Printer – Backward Countdown 
+The Grand National Athletics Championship is about to begin, and the stadium is buzzing with excitement. The announcer, Kishore, has been given a special responsibility for the relay race heats — this round is unique because only athletes assigned to even-numbered lanes will compete. To make the announcement more thrilling, Kishore decides not to call the lanes in ascending order. Instead, he will start with the highest lane number (N) and work his way backwards, calling each even number down to 2 in a commanding voice that echoes through the loudspeakers.
+The athletes stand at their marks, and the audience watches eagerly. If Kishore skips a number or announces them in the wrong order, confusion will erupt among the competitors, delaying the event and angering the organizers. To ensure absolute accuracy and speed, Kishore wants a digital list generated in advance so he can read it directly without thinking. Your task is to create a program that, given a number N, prints all even numbers from N down to 2, each on its own line, in perfect reverse order.
+Input Format:
+One line: Integer N
+Output Format:
+Even numbers from N to 2, separated by newline
+Constraints:
+2 ≤ N ≤ 100
+Sample Input:
+
+10
+Sample Output:
+
+10
+8
+6
+4
+2
+
+
+Problem 1: Spiral Light Decoration – Festival Pillar Wrap 
+Every year during the grand Diwali festival, the central square of Ramu’s village turns into a mesmerizing hub of colors, lights, and laughter. This time, the village elders have handed Ramu the important responsibility of decorating the tallest pillar in the middle of the square. Ramu wants to make the decoration extra special by using a newly purchased set of LED lights, each numbered in sequence from 1 onwards. His creative plan is to wrap the lights in a perfect clockwise spiral starting from the top-left corner of the pillar’s square-shaped base and continuing inward until it reaches the very center. He has carefully drawn the base as an N × N grid (where N is an odd number) so that his fellow decorators can follow a precise numbering order while attaching the LEDs. Now, before the decoration begins, Ramu needs to create the exact grid pattern showing the sequence in which the lights should be placed, so no mistakes happen during the festival rush.
+Input Format:
+One line: Integer N (odd)
+Output Format:
+N lines, each with N space-separated integers forming a spiral matrix
+Constraints:
+1 ≤ N ≤ 9 (odd only)
+Sample Input:
+
+3
+Sample Output:
+
+1 2 3
+8 9 4
+7 6 5
+ 
+________________________________________
+Problem 2: Missing Dice Faces – Carnival Game Mystery 
+At the bustling annual carnival, the game stalls are packed with excited players, colorful banners, and the sound of cheering crowds. Ayan runs a popular dice-based challenge where players roll a standard 6-sided die multiple times to score points. However, this year something strange has happened — one side of the die on his main table has been mysteriously rubbed clean, and the number is no longer visible. In a normal die, the sum of the numbers on opposite faces is always 7, which means if we knew the top face, the bottom face would be easy to figure out. Ayan has been keeping records of the visible top faces for N rolls but now needs to calculate the total sum of all missing bottom faces to check if the game was fair. Since the crowd is growing impatient, you must quickly help him find the missing total.
+Input Format:
+First line: Integer N
+Second line: N space-separated integers (values from 1–6)
+Output Format:
+One line: Missing total
+Constraints:
+1 ≤ N ≤ 100
+Sample Input:
+
+3
+5 6 4
+Sample Output:
+
+6
+ 
+________________________________________
+Problem 3: Password Pattern Validation – Secure Login System 
+Shruti works as the lead software engineer at a large company that is launching a new internal employee portal. Security is the top priority, especially because the portal will handle sensitive payroll, project, and client information. To avoid weak passwords, Shruti implements a strict set of rules: a valid password must have at least one uppercase letter, one lowercase letter, and one digit. Without all three, the system will immediately mark the password as “Invalid.” On launch day, hundreds of employees are creating their accounts, and Shruti needs an automated way to check each entered password. Your task is to read N passwords and print whether each one is “Valid” or “Invalid” according to Shruti’s rules.
+Input Format:
+First line: N
+Next N lines: each a password string
+Output Format:
+N lines: “Valid” or “Invalid”
+Constraints:
+1 ≤ N ≤ 50, Password ≤ 100 chars
+Sample Input:
+
+2
+Hello123
+Sample Output:
+
+Valid
+Invalid
+ 
+________________________________________
+Problem 4: Max Repeated Digit – Number Frequency Analyzer 
+Aman works for a cyber security team that often deals with enormous logs of transaction IDs, authentication codes, and system-generated keys. One of his tasks is to analyze these numbers and detect unusual patterns. Recently, his system flagged several numbers that might indicate fraud. To investigate further, Aman needs to find which single digit occurs most frequently in a given number. If two or more digits have the same highest frequency, he chooses the larger digit as the result, assuming hackers often prefer larger numeric symbols for such manipulations. This quick check helps him decide if a number needs deeper investigation.
+Input Format:
+One line: Integer N
+Output Format:
+Most repeated digit
+Constraints:
+0 ≤ N ≤ 10^9
+Sample Input:
+
+112233
+Sample Output:
+
+3
+ 
+________________________________________
+Problem 5: Special Prime Digits – Number Classification Challenge 
+Ria is a mathematics enthusiast who loves exploring patterns in numbers. She recently invented her own category of numbers called “digit-prime numbers” — numbers in which every single digit is a prime number (2, 3, 5, or 7). She is curious to know how many such numbers exist between 1 and a given number N. For example, 2, 3, 5, 7, 23, and 53 are all “digit-prime” numbers. Ria believes these numbers have unique mathematical beauty, so she wants to write them down for her research journal.
+Input Format:
+One line: Integer N
+Output Format:
+One line: Count of digit-prime numbers from 1 to N
+Constraints:
+1 ≤ N ≤ 1000
+Sample Input:
+
+10
+Sample Output:
+
+4
+ 
+________________________________________
+Problem 6: Digit Product Excluder – Selective Multiplication 
+Tara is designing a quirky digital lock system where each passcode is transformed into a “code strength value” before being accepted. The value is calculated by multiplying all digits in the passcode, but she ignores digits that are 0 or 1, as they do not meaningfully change the product. If the passcode has no digits other than 0 or 1, the strength value defaults to 1. Tara needs this system to reject weak codes instantly and process strong ones quickly.
+Input Format:
+One line: Integer N
+Output Format:
+One line: Product of valid digits
+Constraints:
+0 ≤ N ≤ 10^9
+Sample Input:
+yaml
+
+1025
+Sample Output:
+
+10
+
+ 
+Problem 7: Sum of Even Digits – Digital Filter 
+Nitya has recently joined a futuristic research facility specializing in decoding alien communication signals intercepted by satellites. These signals often arrive in the form of enormous numeric sequences, far too long for human operators to analyze by eye. Within the research division, her specific responsibility is to run what they call a “digital filter”, which helps separate potentially important transmissions from ordinary static. The filtering rule is strange yet simple: a signal is more likely to be meaningful if the sum of all its even digits surpasses a certain threshold. Odd digits are considered “noise indicators” and are ignored in this preliminary check.
+On her desk sits a blinking console displaying numbers in real time, each one representing a decoded segment of a larger transmission. The automated software can read these numbers but cannot decide which are promising. Nitya must design a quick computational routine that takes a given number N, inspects each digit, adds up only those digits that are even (0, 2, 4, 6, 8), and outputs the total. Her team will then decide whether to keep or discard the transmission based on the result. Since these sequences arrive rapidly and unpredictably, the solution needs to be reliable, fast, and capable of handling very large numbers.
+Input Format:
+One line: Integer N
+Output Format:
+One line: Sum of even digits
+Constraints:
+0 ≤ N ≤ 10^9
+Sample Input:
+
+123456
+Sample Output:
+
+12
+ 
+________________________________________
+Problem 8: Consecutive Star Pattern – Staircase Stage Design 
+The annual cultural festival at Greenwood High School is a grand event, attracting parents, alumni, and even local celebrities. This year, the stage backdrop must reflect the theme “Steps to Greatness,” symbolizing the journey of students as they grow from timid beginners to confident achievers. Karan, the school’s beloved art teacher, has been chosen to lead the decoration effort. After many design drafts, he decides on a simple yet symbolic representation — a staircase made entirely of golden stars cut from glittery cardboard.
+The first row at the very bottom will have 1 shining star, the next row will have 2, the next will have 3, and so forth until the top row has exactly N stars. Each star must be aligned perfectly so that the shape resembles a staircase ascending from left to right. The audience, from their seats, will see the gradual rise as a powerful symbol of persistence. Karan knows that even one misplaced star will ruin the symmetry, so he wants to pre-plan the pattern digitally before giving instructions to his student helpers. You must help Karan generate the exact star arrangement for N rows, making sure each row’s stars are printed in the correct sequence without any gaps or misalignments.
+Input Format:
+One line: Integer N
+Output Format:
+N lines of increasing stars
+Constraints:
+1 ≤ N ≤ 100
+Sample Input:
+
+4
+Sample Output:
+markdown
+
+*
+**
+***
+****
+________________________________________
+Problem 9: Alternating Sum Series – Plus-Minus Counter 
+At the heart of a bustling mathematics fair, an enthusiastic puzzle master has set up a challenge stall that attracts curious minds of all ages. The challenge is deceptively simple: given any number N, you must compute the value of a special alternating series — 1 - 2 + 3 - 4 + 5 ... ± N. The signs alternate, starting with a plus for the first number, minus for the second, plus for the third, and so on. It looks harmless on paper, but the puzzle master knows that when N becomes large, the human brain struggles to keep track of the running total without making mistakes.
+To make things more exciting, the puzzle is part of a timed competition where contestants have only one minute to produce the correct answer. Those who succeed win a golden token that can be exchanged for a mystery prize at the main stage. The stall has already seen several overconfident mathematicians lose track halfway, ending up with wildly incorrect answers. Now, your job is to create a program that solves the puzzle instantly and without error, no matter how large N is, so that you can secure the golden token with confidence.
+Input Format:
+One line: Integer N
+Output Format:
+One line: Final result of the series
+Constraints:
+1 ≤ N ≤ 1000
+Sample Input:
+
+5
+Sample Output:
+
+3
+ 
+________________________________________
+Problem 10: Reverse Even Printer – Backward Countdown 
+The Grand National Athletics Championship is about to begin, and the stadium is buzzing with excitement. The announcer, Kishore, has been given a special responsibility for the relay race heats — this round is unique because only athletes assigned to even-numbered lanes will compete. To make the announcement more thrilling, Kishore decides not to call the lanes in ascending order. Instead, he will start with the highest lane number (N) and work his way backwards, calling each even number down to 2 in a commanding voice that echoes through the loudspeakers.
+The athletes stand at their marks, and the audience watches eagerly. If Kishore skips a number or announces them in the wrong order, confusion will erupt among the competitors, delaying the event and angering the organizers. To ensure absolute accuracy and speed, Kishore wants a digital list generated in advance so he can read it directly without thinking. Your task is to create a program that, given a number N, prints all even numbers from N down to 2, each on its own line, in perfect reverse order.
+Input Format:
+One line: Integer N
+Output Format:
+Even numbers from N to 2, separated by newline
+Constraints:
+2 ≤ N ≤ 100
+Sample Input:
+
+10
+Sample Output:
+
+10
+8
+6
+4
+2
+
+________________________________________
+Problem 11: Triangle Trap – Star Pattern Trap Detector
+In a digital security simulation, a “trap” is triggered when a perfectly centered triangle of stars appears on the system display. Each layer of the triangle represents a security level, and every new row grows wider by exactly two stars from the one above it. The surrounding spaces are crucial to alignment, as even a single misaligned star would cause the trap to fail. Given an integer N, you must generate the precise star arrangement, row by row, to simulate the trap being active. Engineers use this test to ensure the visual detection system can recognize the pattern accurately under different screen resolutions.
+Input Format:
+One line: Integer N
+Output Format:
+N lines: Triangle of stars with centered formatting
+Constraints:
+1 ≤ N ≤ 100
+Sample Input:
+3
+Sample Output:
+  *
+ ***
+*****
+
+-------------------------------------------
+Problem 12
+Prime Layer Scanner – Hollow Diamond of Primes
+During the exploration of a crashed alien vessel, researchers discovered a glowing display that produces a hollow diamond shape. The outline of the diamond pulses with energy, and its vertices align with prime-numbered signal points. The artifact appears to be a communication device, and reconstructing its exact shape might be crucial to interpreting the signal. The hollow diamond is symmetrical both horizontally and vertically, with spaces carefully placed between the stars to maintain the pattern. You must recreate this diamond, ensuring that every line matches the alien schematic exactly, for a given odd integer N.
+Input Format:
+One line: Integer N (odd number)
+Output Format:
+Hollow diamond pattern with N rows
+Constraints:
+1 ≤ N ≤ 99, N is odd
+Sample Input:
+5
+Sample Output:
+  *
+ * *
+*   *
+ * *
+  *
+
+
